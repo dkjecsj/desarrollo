@@ -9,6 +9,8 @@ public class HolaMundo {
         // Tipo  Nombre  Valor de la variable
         //Definimos la variable
         int miVariableEnteraPorSiempre = 10;
+
+
         System.out.println(miVariableEnteraPorSiempre);
 
         //Cuando la variable ya esta definida , no hay que volver al colocar el tipo de dato.
