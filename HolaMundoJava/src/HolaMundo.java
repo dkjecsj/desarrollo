@@ -8,8 +8,8 @@ public class HolaMundo {
     public static void main(String args[]) {
         // Tipo  Nombre  Valor de la variable
         //Definimos la variable
-        int miVariableEnteraPorSiempre = 10;
-        System.out.println(miVariableEnteraPorSiempre);
+        int miVariableEntera = 10;
+        System.out.println(miVariableEntera);
 
         //Cuando la variable ya esta definida , no hay que volver al colocar el tipo de dato.
         //Modificamos el valor de la varible
