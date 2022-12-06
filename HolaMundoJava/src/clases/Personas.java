@@ -12,8 +12,8 @@ package clases;
 public class Personas {
     //ATRIBUTOS DE LA CLASE
         
-     String nombre; 
-     String apellido;
+    public String nombre; 
+    public  String apellido;
       
    //Definir un metodo
     public void desplegarInformacion (){
