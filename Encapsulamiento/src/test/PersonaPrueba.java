@@ -22,4 +22,6 @@ public class PersonaPrueba {
         System.out.println("Person1 :" + persona1.toString());
     }   
     
+    
+    
 }
