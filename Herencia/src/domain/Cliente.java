@@ -18,6 +18,7 @@ public class Cliente extends Persona {
     private boolean vip;
     private static int contadorCliente;
 
+   
     public Cliente(Date fechaRegistro, boolean vip, String nombre, char genero, int edad, String direccion) {
         super(nombre, genero, edad , direccion);
         this.idCliente = ++Cliente.contadorCliente;
