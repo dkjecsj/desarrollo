@@ -17,9 +17,10 @@ public class TestArreglos {
         System.out.println("edades 0= " + edades[0] + " edades 1=" + edades[1] + " edades 2=" + edades[2]);
         
         for(int i = 0; i < edades.length; i++){
-            System.out.println("Edades elemento = " + i + ": "+ edades[i]) ;
+            System.out.println("Edades elemento = " + i + ": "+ edades[i]);
         }
         
+    // String fruta[] = ["mango", "manzana", "banano"];
         
     }  
     

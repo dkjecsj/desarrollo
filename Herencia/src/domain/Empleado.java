@@ -5,6 +5,8 @@ package domain;
  *
  * @author grislypaolabeltranbarrios
  */
+
+
 public class Empleado  extends Persona {
     private int  idEmpleado; 
     private double sueldo;
