@@ -10,8 +10,8 @@
     - Requisitos de instalación
 4. Contenido del curso
    - Universidad Java De Cero A Experto.
-5. Ejercicios.
-   - 
+5. Ejercicios
+   - Operaciones Aritmeticas
 6. Personas Contribuyentes
 7. Personas Desarrolladores del proyecto
 
@@ -28,7 +28,7 @@ En el repositorio podremos encontrar el desarrollo los cursos establecidos en el
 2. Hacer uso del sistema de control GitHub.
 
 
-##Contenido del curso
+## **Contenido del curso**
 
 ### **Universidad Java De Cero A Experto.**
 
@@ -60,7 +60,61 @@ En el transcurso de la primera semana abordamos las siguientes secciones:
 
 En el transcurso de los temas se realizaron diferentes ejercicios los cuales de desarrollaron de la siguiente manera.
 
-1. El primer ejercicio solicitaban crear un programa el cual fuese capaz de realizar operaciones aritméticas. El programa debía  solicitar el 
+## Operaciones Aritméticas:
+
+ El primer ejercicio solicitaban crear un programa el cual fuese capaz de realizar operaciones aritméticas. El programa debía  solicitar el nombre, cédula de la persona una sola vez , también se debía solicitar el numero y numero , ingresar que operacion aritmética quería realizar (Suma , Resta , Multiplicación y División)  el programa finalizaba cuando el usuario ingresa terminar todo esto se debía solicitar por medio de consola. A continuación se mostrara en código el cual brinda la solución requerida para la solicitud.
+
+```
+package calculos;
+
+public class Calculos {
+
+    //Atributos 
+    int cedula;
+    int numeroUno;
+    int numeroDos;
+    int resultado;
+    String nombre;
+    String operacion = "";
+    String suma = "suma";
+    String resta = "resta";
+    String multiplicacion = "multiplicacion";
+    String division = "division";
+    String terminar = "terminar";
+
+    //Constructor vacio
+    public Calculos() {
+
+    }
+
+    //Metodo operaciones
+    public void operador() {
+
+        if (this.operacion.equals(suma)) {
+            this.resultado = this.numeroUno + this.numeroDos;
+            System.out.println("Nombre: " + nombre + "\ncedula: " + cedula + "\nEl resultado de la suma es: " + resultado);
+
+        } else if (this.operacion.equals(resta)) {
+            this.resultado = this.numeroUno - this.numeroDos;
+            System.out.println("Nombre: " + nombre + "\ncedula: " + cedula + "\nEl resultado de la resta es :" + resultado);
+
+        } else if (this.operacion.equals(multiplicacion)) {
+            this.resultado = this.numeroUno * this.numeroDos;
+            System.out.println("Nombre: " + nombre + "\ncedula: " + cedula + "\nEl resultado de la multiplicacion es: " + resultado);
+
+        } else if (this.operacion.equals(division)) {
+            this.resultado = this.numeroUno / this.numeroDos;
+            System.out.println("Nombre: " + nombre + "\ncedula: " + cedula + "\nEl resultado de la division es: " + resultado);
+
+        }
+
+    }
+
+}
+
+```
+
+
 
 
 
