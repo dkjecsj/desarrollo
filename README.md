@@ -25,8 +25,7 @@ En el repositorio podremos encontrar el desarrollo los cursos establecidos en el
 2. Hacer uso del sistema de control GitHub.
 
 
-
-[Contenido Del Curso](contenido del curso)
+##Contenido del curso
 
 ### **Universidad Java De Cero A Experto.**
 
@@ -41,7 +40,13 @@ En el transcurso de la primera semana abordamos las siguientes secciones:
 - Sección de la 7 a la 14: En estas secciones se trabajaron los temas de creación de clases en java , métodos, constructores , alcance de variables , paso por valor y por referencia, uso de la palabra return , nula y this y uno de los temas fundamentales de la programación en java encapsulamiento.De igual manera el curso de desarrolla por diferentes contenidos en los cuales podemos desarrollar ejercicios que nos ayuden a reforzar los conocimientos obtenidos. 
  
 ---
-- Sección 15 a la 20: Apartir de esta sección el curso empieza a tratar temas un poco mas avanzados , en los cuales podemos encontrar que es el Contexto Estatico en Java (Static),                                                                                                        Herencia, sobre carga de constructores y métodos ,el uso de paquetes y la palabra final, manejo de arreglos.
+- Sección 15 a la 20: A partir de esta sección el curso empieza a tratar temas un poco mas avanzados , en los cuales podemos encontrar que es el Contexto Estático en Java (Static),                                                                                                        Herencia, sobre carga de constructores y métodos ,el uso de paquetes y la palabra final, manejo de arreglos. Estos temas son fundamentales para el desarrollo de todos los programas que queramos implementar por eso es bueno que pongamos en practica todos los conceptos tratados en cada una de las secciones , para poder aclarar dudas que surgen y que estas no afecten el avance del aprendizaje.   
+
+--
+
+- Sección 21, 22 6 27: 
+
+
 
 
 
