@@ -6,9 +6,12 @@
 
 1. Indice
 2. Descripción del proyecto
-3. Estado del proyecto
-4. Características de la aplicación
-5. Tecnologias usadas
+3. Guia de inicio
+    - Requisitos de instalación
+4. Contenido del curso
+   - Universidad Java De Cero A Experto.
+5. Ejercicios.
+   - 
 6. Personas Contribuyentes
 7. Personas Desarrolladores del proyecto
 
@@ -42,9 +45,22 @@ En el transcurso de la primera semana abordamos las siguientes secciones:
 ---
 - Sección 15 a la 20: A partir de esta sección el curso empieza a tratar temas un poco mas avanzados , en los cuales podemos encontrar que es el Contexto Estático en Java (Static),                                                                                                        Herencia, sobre carga de constructores y métodos ,el uso de paquetes y la palabra final, manejo de arreglos. Estos temas son fundamentales para el desarrollo de todos los programas que queramos implementar por eso es bueno que pongamos en practica todos los conceptos tratados en cada una de las secciones , para poder aclarar dudas que surgen y que estas no afecten el avance del aprendizaje.   
 
---
+---
 
-- Sección 21, 22 6 27: 
+- Sección 21, 22 y 27: En estas secciones se trabajaron temas como manejo de matrices , diseño de clases , manejo de forEach en java. 
+
+---
+
+- Sección 31 a la 37 : Los temas que se  trabajaron en esta sección son de gran importancia debido a que vemos los pilares fundamentales para el desarrollo de programas en java como lo es el polimorfismo el cual es un tema bastante abstracto en cual se debe estudiar y revisar de una manera frecuente ya que esto se utiliza con mucha frecuencia al momento de trabajar con java. Tambien se ven temas como conversión de objetos (Casting), la clase Object en java especificamente los métodos Equals, hashCode y toString, Clases Abstractas , manejo de Interfaces y manejo de JavaBeans el cual nos abre las puertas para poder implementar otras tecnologías que hacen que el desarrollo posee una mejor adaptación. 
+
+
+---
+
+### Ejercicios 
+
+En el transcurso de los temas se realizaron diferentes ejercicios los cuales de desarrollaron de la siguiente manera.
+
+1. El primer ejercicio solicitaban crear un programa el cual fuese capaz de realizar operaciones aritméticas. El programa debía  solicitar el 
 
 
 
@@ -52,11 +68,10 @@ En el transcurso de la primera semana abordamos las siguientes secciones:
 
 
 
-El objetivo del curso se hace con la finalidad de cumplir con los días establecidos de capacitación en los cuales se han desarrollado los temas de la sección 1 a la sección 6 en los cuales se abordaron temas como: **variables** , **tipos de datos**, **caracteres especiales**,**operadores aritméticos y lógicos** , **sentencias de control** , entre muchos otros temas que nos ayudaran a reforzar  y obtener nuevos conocimientos para tener una mejor adaptación al mundo del desarrollo web.
 
-En el transcurso del desarrollo del curso de java. Se han visto temas como creación de clases y objetos, uso de métodos , uso de la palabra this, memoria stock y heap , para fortalecer  y aclarar dudas de algunos de estos temas se asigno un ejercicio el cual incorporaba todo los temas vistos hasta este punto el objetivo de este era aplicar todos los conocimientos que previamente habías aprendido en cada unas de las secciones. Dicho ejercicio consistía en desarrollar un programa en el cual  el usuario pudiera elegir que operación aritmética queria realizar , también se le solicitaría a este que ingresara su nombre y cédula, seguido de esto podía elegir que operación realizar e ingresar dos numero para realizar la operación como resultado se mostraría el valor de la operación junto con los datos personales del usuario.
 
-En un inicio se desarrollo el proyecto  en el IDE Netbeans , aquí se crearon dos clases la primera con el nombre de Calculos.java en esta clase se contienen todos los atributos y métodos necesarios para que el programa funcione y la segunda PruebaCalculo.java  en esta clase se contienen los métodos de ejecución.
+
+
 
 
 
