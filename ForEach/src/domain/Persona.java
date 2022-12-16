@@ -24,10 +24,10 @@ public class Persona {
     }
     
     Persona personas [] = {new Persona("juan"), new Persona ("Karla")};
-   for(Persona persona : Personas){
-            System.out.println("persona = " + persona);
+//    for(Persona personas:persona){
+           // System.out.println("persona = " + persona);
 
-}
+
     
     
     

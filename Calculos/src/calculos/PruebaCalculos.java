@@ -30,7 +30,6 @@ public class PruebaCalculos {
             System.out.println("Ingrese que operacion quiere realizar :");
             System.out.println("suma , resta , multiplicacion , division o terminar");
             persona.operacion = consola.nextLine();
-            
 
             if (persona.operacion.equals("terminar")) {
                 contador = 0;

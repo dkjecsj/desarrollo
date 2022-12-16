@@ -11,6 +11,7 @@ public class Producto {
     
     private Producto (){
         this.idProducto = ++Producto.contadorProductos;
+        
     
     }
     
