@@ -2,8 +2,6 @@
 
 ## Indice
 
-#indice
-
 1. Indice
 2. Descripción del proyecto
 3. Guia de inicio
@@ -11,16 +9,20 @@
 4. Contenido del curso
    - Universidad Java De Cero A Experto.
 5. Ejercicios
-   - Operaciones Aritmeticas
+   - Operaciones Aritmeticas 
+   - Plataforma Colegio
+   - Palindromo
+   - Recuento
 6. Personas Contribuyentes
 7. Personas Desarrolladores del proyecto
 
 
-#Descripción del proyecto
+# Descripción del proyecto
 En el repositorio podremos encontrar el desarrollo los cursos establecidos en el proceso de capacitación este abarcara diferentes temas como JAVA, SpringBoot , GitHuB , Bases de datos en los cuales obtendremos conocimientos previos para poder realizar las actividades que se no sean asignadas en el transcurso de los meses de trabajo.
 
 
-#Guia de Inicio
+# Guia de Inicio
+
 ### **Requisitos de Instalación**
 
 1. Contar con IDE de preferencia en este caso se utilizo NetBeans.
@@ -54,6 +56,9 @@ En el transcurso de la primera semana abordamos las siguientes secciones:
 
 
 ---
+
+- Sección 38 a la 40 : En los temas de visto en esta sección se pudo trabajar con el manejo de Excepciones en Java , API Collections en donde trabajamos toda la parte de ArrayList de que manerA se crea ,  y las diferentes aplicaciones con las que cuenta y por ultimo Manejo de Generics en java el cual es muy frecuente verlo en el día a dia debido que eso nos ahorra códigos al momento de querer especificar el tipo de un objeto. Con estas secciones daríamos fin al curso de java de cero a experto.
+
 
 ### Ejercicios 
 
@@ -432,6 +437,127 @@ public class Examenes {
 
 
 ```
+
+###Palindromo :
+
+En este ejercicio debíamos determinar si una matriz de n elementos es simétrica es decir si se ve igual invertida. Por ejemplo (a, b , c , d , d , c , b ,a) n siempre será un numero par entre 2 y 10. Si es simétrica el programa debe imprimir "Symmetric"  , de lo contrario debía imprimir "Asymmetric". A continuación se mostrara en código el cual brinda la solución requerida para la solicitud.
+
+```
+package domain;
+
+import java.util.Scanner;
+
+public class Palindromo {
+
+    public static void main(String[] args) {
+
+        Scanner consola = new Scanner(System.in);
+        
+         int contador = 1;
+
+         while (contador != 0) {
+       
+            System.out.println("Ingrese caracteres pares del 2 al 10: ");
+            String entrada = consola.nextLine();
+            int pos = 0;
+            entrada = entrada.replaceAll(" ", "");
+
+            if (entrada.equals("Terminar")) {
+                contador = 0;
+                System.out.println("Programa finalizado");
+
+            } else {
+
+                char[] ordenado = entrada.toCharArray() ;
+                char[] inverso = new char[ordenado.length];
+
+                for (int i = ordenado.length; i > 0; i--) {
+                    inverso[pos] = ordenado[i - 1];
+                    pos++;
+                }
+
+                String inversoDos = new String(inverso);
+                if (entrada.equals(inversoDos)) {
+                    System.out.println("Symmetric");
+
+                } else {
+
+                    System.out.println("Asymmetri");
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
+
+```
+
+###Recuento:
+
+En el siguiente ejercicio se solicitaba un programa el cual tuviese un arreglos de nombre miArray con 10 elementos enteros del 1 al 9. Este debía imprimir el numero que tiene mas ocurrencias seguidas en el arreglo y tambien debía imprimir la cantidad de veces que aparece en la secuencia. El programa debía analizarlo de izquierda a derecha para que en caso de que dos numeres cumplan la condición  se muestre el que aparece por primera vez.A continuación se mostrara en código el cual brinda la solución requerida para la solicitud.
+
+```
+
+package domain;
+
+import java.util.*;
+
+public class Recuento {
+
+    public static void main(String[] args) {
+
+        int miArray[] = {9, 3, 4 , 1, 5, 6, 6, 6, 2, 2};
+        //{2,2,3,4,4,4,6,7,8,9}
+        Arrays.sort(miArray); //Ordena el array.
+        int cont = 0;
+        int cont2 = 0;
+        int num = miArray[0];
+        int numeroMayor = 0;
+
+        for (int i = 0; i < miArray.length; i++) {
+
+            if (num == miArray[i]) {
+                cont++;
+
+            } else {
+
+                System.out.println("Contador 1 : " + cont + "Contador 2 :" + cont2);
+
+                if (cont2 < cont) {
+
+                    cont2 = cont; // Muestra el valor que mas se repitio.
+                    numeroMayor = miArray[i-1];
+
+                    System.out.println("Valor que mas se repite " + cont2);
+
+                    System.out.println("mi Array " + miArray[i - 1]);
+
+                }
+
+                cont = 1;
+                num = miArray[i];
+                
+
+            }
+        }
+
+        System.out.println("Longest: " + cont2);
+        System.out.println("Number: " + numeroMayor);
+
+    }
+
+}
+
+
+```
+
+
+
 
 
 
