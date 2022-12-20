@@ -170,7 +170,7 @@ public class PruebaCalculos {
 
 ```
 
-##Plataforma Colegio:
+## Plataforma Colegio:
 
 En este segundo ejercicio solicitaban crear una plataforma para un colegio en donde se almacenaran los profesores , estudiantes y el resultado de los exámenes de 3 preguntas. La informacion debía solicitarse por medio de consola la cual se trataba de ingresar el nombre del profesor evaluado, el nombre de los estudiantes y el puntaje que saco en cada uno de los exámenes, al finalizar  el programa debía imprimir el nombre del profesor con su cédula , el nombre de los estudiantes y la nota final. Para la solución de esta solicitud se hizo uso de objetos , métodos en los cuales se realiza la operación para promediar la notas ingresadas, uso de  arreglos , ciclos y condicionales. A continuación se mostrara en código el cual brinda la solución requerida para la solicitud.
 
@@ -438,7 +438,7 @@ public class Examenes {
 
 ```
 
-###Palindromo :
+## Palindromo :
 
 En este ejercicio debíamos determinar si una matriz de n elementos es simétrica es decir si se ve igual invertida. Por ejemplo (a, b , c , d , d , c , b ,a) n siempre será un numero par entre 2 y 10. Si es simétrica el programa debe imprimir "Symmetric"  , de lo contrario debía imprimir "Asymmetric". A continuación se mostrara en código el cual brinda la solución requerida para la solicitud.
 
@@ -497,7 +497,7 @@ public class Palindromo {
 
 ```
 
-###Recuento:
+## Recuento:
 
 En el siguiente ejercicio se solicitaba un programa el cual tuviese un arreglos de nombre miArray con 10 elementos enteros del 1 al 9. Este debía imprimir el numero que tiene mas ocurrencias seguidas en el arreglo y tambien debía imprimir la cantidad de veces que aparece en la secuencia. El programa debía analizarlo de izquierda a derecha para que en caso de que dos numeres cumplan la condición  se muestre el que aparece por primera vez.A continuación se mostrara en código el cual brinda la solución requerida para la solicitud.
 
