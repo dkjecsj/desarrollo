@@ -17,7 +17,8 @@
 7. Personas Desarrolladores del proyecto
 
 
-# Descripción del proyecto
+## Descripción del proyecto
+
 En el repositorio podremos encontrar el desarrollo los cursos establecidos en el proceso de capacitación este abarcara diferentes temas como JAVA, SpringBoot , GitHuB , Bases de datos en los cuales obtendremos conocimientos previos para poder realizar las actividades que se no sean asignadas en el transcurso de los meses de trabajo.
 
 
