@@ -2,7 +2,7 @@
 
 ## Indice
 
-[Indice](#indice)
+#indice
 
 1. Indice
 2. Descripción del proyecto
@@ -16,12 +16,11 @@
 7. Personas Desarrolladores del proyecto
 
 
-[Descripción del proyecto](descripcion-del-proyecto)
-
+#Descripción del proyecto
 En el repositorio podremos encontrar el desarrollo los cursos establecidos en el proceso de capacitación este abarcara diferentes temas como JAVA, SpringBoot , GitHuB , Bases de datos en los cuales obtendremos conocimientos previos para poder realizar las actividades que se no sean asignadas en el transcurso de los meses de trabajo.
 
 
-[Guia de Inicio](guia-de-inicio)
+#Guia de Inicio
 ### **Requisitos de Instalación**
 
 1. Contar con IDE de preferencia en este caso se utilizo NetBeans.
@@ -166,11 +165,273 @@ public class PruebaCalculos {
 
 ```
 
+##Plataforma Colegio:
+
+En este segundo ejercicio solicitaban crear una plataforma para un colegio en donde se almacenaran los profesores , estudiantes y el resultado de los exámenes de 3 preguntas. La informacion debía solicitarse por medio de consola la cual se trataba de ingresar el nombre del profesor evaluado, el nombre de los estudiantes y el puntaje que saco en cada uno de los exámenes, al finalizar  el programa debía imprimir el nombre del profesor con su cédula , el nombre de los estudiantes y la nota final. Para la solución de esta solicitud se hizo uso de objetos , métodos en los cuales se realiza la operación para promediar la notas ingresadas, uso de  arreglos , ciclos y condicionales. A continuación se mostrara en código el cual brinda la solución requerida para la solicitud.
+
+
+- Paquete test
+
+### clase profesores
 
 
 
+```
+
+package test;
+
+/**
+ *
+ * @author grislypaolabeltranbarrios
+ */
+public class Profesores {
+    
+     private String nombre , apellido;
+     
+     
+     public Profesores (){
+         
+     
+     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    @Override
+    public String toString() {
+        return "Profesores{" + "nombre=" + nombre + ", apellido=" + apellido + '}';
+    }
+     
+    
+     
+     
+}
 
 
+
+```
+
+### clase Testmain
+
+```
+package test;
+
+import test.objetos.Estudiantes;
+import java.util.Scanner;
+
+public class Testmain {
+
+    public static void main(String[] args) {
+
+        Scanner consola = new Scanner(System.in);
+
+        Estudiantes alumnos[] = new Estudiantes[3];
+
+        Profesores profesor = new Profesores();
+        System.out.println("Ingrese nombre del docente");
+        profesor.setNombre(consola.nextLine());
+        System.out.println("Ingrese apellido del docente");
+        profesor.setApellido(consola.nextLine());
+
+        int i = 0;
+        int contador = 0;
+
+        while (i < alumnos.length) {
+
+            System.out.println("Desea Terminar");
+            if (consola.nextLine().equals("si")) {
+                i = alumnos.length;
+                for (int j = 0; j < alumnos.length; j++) {
+                    System.out.println("Calificion Examenes Estudiantes: " + alumnos[j].getNota()+" " + alumnos[j].toString() +" "+ profesor.toString());
+
+                }
+
+            } else {
+
+                if (contador < alumnos.length) {
+
+                    Estudiantes estudiante = new Estudiantes();
+
+                    System.out.println("Ingrese nombre estudiante");
+                    estudiante.setNombre(consola.nextLine());
+
+                    System.out.println("Ingrese calificacion examen A: ");
+                    estudiante.setA(Integer.parseInt(consola.nextLine()));
+                    System.out.println("Ingrese calificacion examen B: ");
+                    estudiante.setB(Integer.parseInt(consola.nextLine()));
+                    System.out.println("Ingrese calificacion examen C: ");
+                    estudiante.setC(Integer.parseInt(consola.nextLine()));
+
+                    Testmetodos nota = new Testmetodos();
+
+                    estudiante.setNota(nota.Sumar(estudiante.getA(), estudiante.getB(), estudiante.getC()));
+
+                    alumnos[contador] = estudiante;
+                    contador = contador + 1;
+                    
+                    
+
+                } else {
+
+                    System.out.println("Supero el tamaño del arreglo");
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
+
+```
+
+
+
+### clase Testmetodo
+
+
+```
+package test;
+
+public class Testmetodos {
+    
+   public int Sumar (int a , int b , int c){
+       int nota = (a+b+c)/3;
+       return nota ;
+  
+   
+
+   
+ 
+
+
+    
+
+
+    }
+}
+
+    
+
+```
+
+
+- Paquete  test.objetos
+
+
+### Clase Estudiantes
+
+package test.objetos;
+
+public class Estudiantes  extends Examenes{
+    
+    private String nombre;
+ 
+    
+    
+    public Estudiantes(){
+        
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    @Override
+    public String toString() {
+        return "Estudiantes{" + "nombre=" + nombre + '}';
+    }
+    
+    
+    
+    
+    
+}
+
+
+### Examenes
+
+
+
+```
+package test.objetos;
+
+public class Examenes {
+    
+    private int a ;
+    private int b; 
+    private int c;
+    private int nota;
+    
+    
+   public Examenes (){
+   
+   }
+
+    public int getA() {
+        return this.a;
+    }
+
+    public void setA(int a) {
+        this.a = a;
+    }
+
+    public int getB() {
+        return b;
+    }
+
+    public void setB(int b) {
+        this.b = b;
+    }
+
+    public int getC() {
+        return c;
+    }
+
+    public void setC(int c) {
+        this.c = c;
+    }
+   
+     public int getNota() {
+        return this.nota;
+    }
+
+    public void setNota(int nota) {
+        this.nota = nota;
+    }
+
+    @Override
+    public String toString() {
+        return "Examenes{" + "a=" + a + ", b=" + b + ", c=" + c + ", nota=" + nota + '}';
+    }
+    
+    
+   
+   
+}
+
+
+```
 
 
 
