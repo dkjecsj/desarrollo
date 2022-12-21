@@ -557,7 +557,7 @@ public class Recuento {
 
 ```
 
-### Correcciones
+### Correcciones:
 
 
 El objetivo de este ejercicio se basa en analizar el código que otra persona ya había desarrollando el cual tenia ciertos errores los cuales no permitían obtener el resultado que se solicitaba . Se debía corregir dichos errores para que el programa corriera de la manera correcta.A continuación se mostrara en código el cual brinda la solución requerida para la solicitud.
