@@ -20,7 +20,7 @@ public class Recuento {
                 cont++;
 
             } else {
-
+8
                 System.out.println("Contador 1 : " + cont + "Contador 2 :" + cont2);
 
                 if (cont2 < cont) {
