@@ -606,7 +606,7 @@ El objetivo de este ejercicio es  realizar un programa en el que reciba un arreg
 
 - Paquete  domain
 
-## Clase Números
+### Clase Números
 
 ```
 
@@ -670,7 +670,7 @@ public class Numeros {
 
 - Paquete  test
 
-## Clase TestArreglos
+### Clase TestArreglos
 
 
 ```
