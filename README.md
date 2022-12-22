@@ -13,6 +13,8 @@
    - Plataforma Colegio
    - Palindromo
    - Recuento
+   - Correcciones de código 
+   - Arreglo Numero Mayor y Menor.
 6. Personas Contribuyentes
 7. Personas Desarrolladores del proyecto
 
@@ -597,7 +599,134 @@ public class ListClass {
 
 ```
 
+### Arreglo Numero Mayor  y Menor: 
 
+El objetivo de este ejercicio es  realizar un programa en el que reciba un arreglo de tamaño 10 con distintos números. Se debe digiera un numero mediante consola, y el numero ingresado debe compararse con cada una de las posiciones del arreglo si el numero digitado es mayor de guardara el numero del arreglo en otro arreglo  asignado como mayor, en caso de que sea menor en un arreglo definido como menor, y en caso de que sea igual no deberá ser almacenado.A continuación se mostrara en código el cual brinda la solución requerida para la solicitud.
+
+
+- Paquete  domain
+
+## Clase Números
+
+```
+
+package domain;
+
+public class Numeros {
+    
+ 
+    private int numero;
+    private int numeroMayor;
+    private int numeroMenor;
+    
+    
+   
+    public Numeros (){
+     
+    
+     }
+    
+    
+    //Metodos get y set
+
+    public int getNumero() {
+        return this.numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public int getNumeroMayor() {
+        return this.numeroMayor;
+    }
+
+    public void setNumeroMayor(int numeroMayor) {
+        this.numeroMayor = numeroMayor;
+    }
+
+    public int getNumeroMenor() {
+        return this.numeroMenor;
+    }
+
+    public void setNumeroMenor(int numeroMenor) {
+        this.numeroMenor = numeroMenor;
+    }
+
+    @Override
+    public String toString() {
+        return "Numeros{" + "numero=" + numero + ", numeroMayor=" + numeroMayor + ", numeroMenor=" + numeroMenor + '}';
+    }
+    
+    
+        
+    
+}
+
+
+
+```
+
+
+- Paquete  test
+
+## Clase TestArreglos
+
+
+```
+
+package test;
+
+import domain.Numeros;
+import java.util.Scanner;
+
+public class TestArreglos {
+
+    public static void main(String[] args) {
+
+        Scanner consola = new Scanner(System.in);
+
+        Numeros numero = new Numeros();
+        System.out.println("Ingrese un numero");
+        numero.setNumero(Integer.parseInt(consola.nextLine())); 
+        System.out.println("numero = " + numero.getNumero()); 
+        int miArray[] = {2, 3, 4, 5, 3, 6, 7, 9, 0, 8};
+        int arrayMenor[] = new int[10];
+        int arrayMayor[] = new int[10];
+        
+        
+        
+        for (int i = 0; i < miArray.length; i++) {
+           // System.out.println("array " + miArray[i]);
+            
+            if (miArray[i] > numero.getNumero()) {
+               numero.setNumeroMayor(miArray[i]);
+               arrayMayor [i] = numero.getNumeroMayor();
+              System.out.println("mi array mayor:" + arrayMayor[i]);
+                 
+                
+            }
+            
+            else if(miArray[i] < numero.getNumero()){
+                numero.setNumeroMenor(miArray[i]);
+                arrayMenor[i] = numero.getNumeroMenor();
+               
+                 
+               
+                
+            }
+            
+            System.out.println("Mi array es :" + numero.toString());
+           
+        }
+
+
+    }
+
+} 
+
+
+```
 
 
 
