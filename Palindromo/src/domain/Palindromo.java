@@ -14,6 +14,7 @@ public class Palindromo {
        
             System.out.println("Ingrese caracteres pares del 2 al 10: ");
             String entrada = consola.nextLine();
+            
             int pos = 0;
             entrada = entrada.replaceAll(" ", "");
 

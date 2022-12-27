@@ -26,7 +26,7 @@ public class TestArreglos {
             if (miArray[i] > numero.getNumero()) {
                numero.setNumeroMayor(miArray[i]);
                arrayMayor [i] = numero.getNumeroMayor();
-              System.out.println("mi array mayor:" + arrayMayor[i]);
+              // System.out.println("mi array mayor:" + arrayMayor[i]);
                  //System.out.println("Mi array Mayor :" + numero.toString()); 
                 
             }
@@ -34,8 +34,8 @@ public class TestArreglos {
             else if(miArray[i] < numero.getNumero()){
                 numero.setNumeroMenor(miArray[i]);
                 arrayMenor[i] = numero.getNumeroMenor();
-                //System.out.println("Mi array menor: " + arrayMenor[i]);
-                 // System.out.println("Mi array es :" + numero.toString()); imprimir con el metodo ToString
+               // System.out.println("Mi array menor: " + arrayMenor[i]);
+                 System.out.println("Mi array es :" + numero.toString()); //imprimir con el metodo ToString
                  
                
                 

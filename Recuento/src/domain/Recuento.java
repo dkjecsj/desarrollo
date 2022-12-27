@@ -21,23 +21,22 @@ public class Recuento {
 
             } else {
 
-                System.out.println("Contador 1 : " + cont + "Contador 2 :" + cont2);
+                //System.out.println("Contador 1 : " + cont + "Contador 2 :" + cont2);
 
                 if (cont2 < cont) {
 
                     cont2 = cont; // Muestra el valor que mas se repitio.
                     numeroMayor = miArray[i-1];
 
-                    System.out.println("Valor que mas se repite " + cont2);
+                    //System.out.println("Valor que mas se repite " + cont2);
 
-                    System.out.println("mi Array " + miArray[i - 1]);
+                   // System.out.println("mi Array " + miArray[i - 1]);
 
                 }
 
                 cont = 1;
                 num = miArray[i];
                 
-
             }
         }
 

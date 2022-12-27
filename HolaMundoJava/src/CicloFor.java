@@ -13,7 +13,7 @@ public class CicloFor {
     public static void main(String[] args) {
 
         //CICLO FOR
-        var contador = 0;
+        int contador = 0;
 
         for (contador = 0; contador < 3; contador++) {
             if (contador % 2 != 0) {
