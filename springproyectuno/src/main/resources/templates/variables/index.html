@@ -4,9 +4,12 @@
         <title th:text="${Titulo}"></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" th:href="@{/static.css/style.css}"/>
     </head>
     <body>
-        <h1 th:text="${Titulo}"> </h1>
+        <h1 class="color-rojo" th:text="${Titulo}"> </h1>
+        <h2 class="color-azul">Decorando con estilos css </h2>
+        <img th:src="@{/static.css.imagenes/imagenes.jpg}" ></<img>
         <ul>
             <li><a th:href="@{/variables/string/} + 'Hola andres'">/variables/string/Hola andres</a></li>
             <li><a th:href="@{/variables/string/} + 'Que tal John'">/variables/string/Que tal John</a></li>
