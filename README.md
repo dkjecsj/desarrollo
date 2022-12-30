@@ -8,6 +8,7 @@
     - Requisitos de instalación
 4. Contenido del curso
    - Universidad Java De Cero A Experto.
+   - SpringBoot
 5. Ejercicios
    - Operaciones Aritmeticas 
    - Plataforma Colegio
@@ -729,9 +730,42 @@ public class TestArreglos {
 ```
 
 
+### **Spring Boot.**
+
+Spring Boot es una de las herramientas principales del ecosistema de desarrollo web backend con java , con Spring Boot nos olvidamos de tener que desplegar artefactos Jar o War de manera independiente en uno o muchos servidores web diferentes. Por que nos provee una serie de contenedores  web servlet para que se despliegue nuestra aplicacion automáticamente solo con "Run".
+
+En el contexto de Spring tenemos dos conceptos muy importantes: la inyección de dependencias y la inversión de control. Lo importante a tener en cuenta es que, aunque son conceptos que se relacionan, son distintos. Es decir, la inyección de dependencias es un patrón de diseño que nos permite implementar el principio de inversión de control.
 
 
+Unas de las características de Spring Boot son :
 
+1. Maneja componente ioC inversión de control. Registramos y guardamos  los objetos que son conocidos como Beas o componentes permite modularidad bajo acoplamiento y se puede inyectar un componente  puede tener un atributo o referencia de otro componente y se hace mediante anotaciones esto evita que creemos las instancias de forma explicita con el operador new el framework ya se encarga de eso.
+
+---
+
+2.MVC modelo vista controlador :
+
+M : Se usa para desarrollar aplicaciones web y Apirest
+C : Maneja todas las peticiones del usuario
+v : Mostrar los datos (html, pdf, son, etc)
+
+---
+
+3.Spring incorpora una programación reactiva webFlux es asincrono.Se debe de trabajar con bases de datos que sean de igual manera reactivas.
+
+
+--- 
+
+4. Es una programación orientada a aspectos AIP es un programa basado en intersectores permite modular izar la aplicación
+
+
+---
+
+5.Administrador de dependencias nos permite crear un Jar o War  y  manejo de librerías.
+
+---
+
+6. Los paquetes Jar se usan como plantillas Timeline y Api rest.  Los  War cuando queremos publicar en un  servidor externo y vista JC.
 
 
 
