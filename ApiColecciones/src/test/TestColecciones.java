@@ -45,7 +45,7 @@ public class TestColecciones {
 
     }
     
-    public static void imprimir (Collection coleccion){
+       public static void imprimir (Collection coleccion){
         for(Object elemento :  coleccion){
             System.out.println(" elemento = " + elemento);
         }

@@ -14,13 +14,13 @@ import java.util.Scanner;
 public class SecccionTres {
     
     public static void main(String[] args) {
-        var numeroUno = 10;
+        int numeroUno = 10;
         System.out.println("El numero es = " + numeroUno);
         
-        var numeroDos = 10.0;
+        double numeroDos = 10.0;
         System.out.println("El numero es = " + numeroDos);
         
-        var numeroTres = 10.0F;
+        float numeroTres = 10.0F;
         System.out.println("El numero es = " + numeroTres);
         
         
@@ -40,13 +40,13 @@ public class SecccionTres {
         
        
         
-        var varChar1 = '\u0021';
+        char varChar1 = '\u0021';
         System.out.println("varChar1 = " + varChar1);
         
-        var varDecimal2 = 33;
+        char varDecimal2 = 33;
         System.out.println("varDecimal2 = " + varDecimal2);
         
-        var varSigno3 = '!';
+        char varSigno3 = '!';
         System.out.println("varSigno3 = " + varSigno3);
         
         int variableEnteraSimbolo = '!' ;
@@ -68,7 +68,7 @@ public class SecccionTres {
         }
         
        
-          var edad = 15;
+          int edad = 15;
           
           
           if (edad >= 18) {
@@ -83,34 +83,34 @@ public class SecccionTres {
           
          //CONVERTIR UN TIPO STRING A UN TIPO INT
          
-         var entero = Integer.parseInt("20");
+         int entero = Integer.parseInt("20");
          System.out.println("entero = " + (entero + 1));
      
-         var valorPI = Double.parseDouble("3.1416");
+         double valorPI = Double.parseDouble("3.1416");
          System.out.println("valorPI = " + valorPI);
          
          //Pedir un Valor
          
-         var consola = new Scanner (System.in);
+         Scanner consola = new Scanner (System.in);
 //         System.out.println("Ingresa tu edad: ");
 //         edad = Integer.parseInt(consola.nextLine());
 //         System.out.println("edad = " + edad);
          
          // CONVERTIR UN TIPO INT A STRING
          
-         var  edadTexto = String.valueOf(10);
+         String  edadTexto = String.valueOf(10);
          System.out.println("edadTexto = " + edadTexto);
          
         // Como recuperar un caracter de un cadena.
         
-        var caracter = "Hola".charAt(0);
+        char caracter = "Hola".charAt(0);
         System.out.println("caracter = " + caracter);
         
         System.out.println("Ingresa un caracter");
         caracter = consola.nextLine().charAt(0);
         System.out.println("caracter = " + caracter);
         
-       var nombre2 = "Juan";
+       String nombre2 = "Juan";
        System.out.println(nombre2);
        nombre2 = "Carlos";
        System.out.println(nombre2);

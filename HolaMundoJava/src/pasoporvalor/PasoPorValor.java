@@ -11,7 +11,7 @@ public class PasoPorValor {
     //pero este metodo no puede modificar el valor original
     
     public static void main(String[] args) {
-        var x = 10;
+        int x = 10;
         System.out.println("x = " + x);
         
         cambioValor(x);

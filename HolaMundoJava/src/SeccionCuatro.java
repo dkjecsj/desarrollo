@@ -96,28 +96,28 @@ public class SeccionCuatro {
         System.out.println("k = " + k); //Pendiente un decremento
         System.out.println("o = " + o); */
 //OPERADORES DE IGUALDAD
-        var a = 2;
-        var b = 3;
+        int a = 2;
+        int b = 3;
         
-        var c = (a == b);
+        boolean c = (a == b);
         System.out.println("c = " + c);
 
         //Operador diferente de
-        var d = (a != b);
+        boolean d = (a != b);
         System.out.println("d = " + d);
 
         // Operador para comparar cadenas
-        var cadena = "Hola";
-        var cadena2 = "Hola";
-        var e = (cadena == cadena2); // Se compara la referencia de objetos.
+        String cadena = "Hola";
+        String cadena2 = "Hola";
+        boolean e = (cadena == cadena2); // Se compara la referencia de objetos.
         System.out.println("e = " + e);
         
-        var f = cadena.equals(cadena2);
+        boolean f = cadena.equals(cadena2);
         System.out.println("f = " + f);// Se comparan los contenidos de cadenas
 
         //OPERADORES RELACIONALES
         //1. Estos nos van a indicar si un valor es igual o menor , mayor a otro
-        var g = a >= b;
+        boolean g = a >= b;
         System.out.println("g = " + g);
         
         if (a % 2 == 0) {
@@ -126,8 +126,8 @@ public class SeccionCuatro {
             System.out.println("Es numero Impar");
         }
         
-        var edad = 10;
-        var adulto = 18;
+        int edad = 10;
+        int adulto = 18;
         
         if (edad >= adulto) {
             System.out.println("Es un adulto");
@@ -136,19 +136,19 @@ public class SeccionCuatro {
         }
 
         //OPERADORES CONDICIONALES (&& )
-        var h = 8;
-        var valorMinimo = 0;
-        var valorMaximo = 10;
+        int h = 8;
+        int valorMinimo = 0;
+        int valorMaximo = 10;
         
-        var resultado = h >= 0 && h <= 10;
+        boolean resultado = h >= 0 && h <= 10;
         if (resultado) {
             System.out.println("Dentro del Rango");
         } else {
             System.out.println("Fuera de rango");
         }
         // Operador (||) si alguna de las dos condiciones es verdadera todo el resultado de la operacion sera verdadero.
-        var vacaciones = false;
-        var diaDescanso = true;
+        boolean vacaciones = false;
+        boolean diaDescanso = true;
         
         if (vacaciones || diaDescanso) {
             System.out.println("El padre puede asistir al juego del hijo");
@@ -161,25 +161,25 @@ public class SeccionCuatro {
           2. el signo ? nos indica la operacion que  realizara si la expresion es verdadera
           3. el signo : nos indicara la operacion que realizara si la expresion en falsa
          */
-        var respuesta = (1 > 2) ? "Verdadero" : "Falso";
+        String respuesta = (1 > 2) ? "Verdadero" : "Falso";
         System.out.println("respuesta = " + respuesta);
         
-        var  numero = 8;
+        int  numero = 8;
         respuesta = (numero % 2 == 0 )? "El numero es par" : "El numero es impar";
         System.out.println("respuesta = " + respuesta);
                 
         
         //PRESEDENCIA DE OPERADORES
         
-        var x = 5;
-        var y = 10;
-        var z = ++x  + y--;
+        int x = 5;
+        int y = 10;
+        int z = ++x  + y--;
        
         System.out.println("x = " + x);
         System.out.println("y = " + y);
         System.out.println("z = " + z);
         
-        var operacion = 4 + ((5 * 6) / 3);
+        int operacion = 4 + ((5 * 6) / 3);
         System.out.println("operacion= " + operacion);
         
         operacion = (4 + 5)* 6 /3;

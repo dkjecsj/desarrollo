@@ -25,34 +25,34 @@ public class HolaMundo {
         System.out.println(miVariableCadena);
 
         //Var hara inferencia de tipos en JAVA
-        var miVariableEntera2 = 15;
+        int miVariableEntera2 = 15;
         System.out.println(miVariableEntera2);
 
-        var miVariableCadena2 = "Ejemplo";
+        String miVariableCadena2 = "Ejemplo";
         System.out.println("miVariableCadena2 = " + miVariableCadena2);
 
         //Valores permitidos para nombre de variables.
-        var miVariable = 10;
-        var _miVariable = 2;
-        var $mivariable = 2;
+        int miVariable = 10;
+        int _miVariable = 2;
+        int $mivariable = 2;
         // var áVariable = 1; no se recomienda utilizar
         // var #variable = 1 ; no se permite utilizar caracter especial.
 
-        var usuario = "Emma";
-        var carrera = "Ingeniera";
+        String usuario = "Emma";
+        String carrera = "Ingeniera";
 
-        var union = carrera + " " + usuario;
+        String union = carrera + " " + usuario;
         System.out.println("union = " + union);
 
-        var a = 10;
-        var b = 2;
+        int a = 10;
+        int b = 2;
         System.out.println(a + b); // realiza la suma de numeros
         System.out.println(a + b + usuario); //Evaluacion de izq a der, realiza suma
         System.out.println(usuario + a + b); // Contexto Cadena, todo es una cadena
         System.out.println(usuario + (a + b)); // uso de parentesis modifican la prioridad en la evaluacion
 
         //CARACTERES ESPECIALES
-        var nombre = "Paola";
+        String nombre = "Paola";
         System.out.println("Nueva linea:    \n" + nombre);
         System.out.println("Tabulador:    \t" + nombre);
         System.out.println("Retroceso: \b" + nombre);

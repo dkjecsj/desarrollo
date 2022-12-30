@@ -17,9 +17,9 @@ public class Tarea {
                 
        Scanner consola = new Scanner(System.in);
        System.out.println("Ingrese titulo del libro : ");
-       var tituloLibro = consola.nextLine();
+       String tituloLibro = consola.nextLine();
        System.out.println("Ingrese nombre del autor");
-       var autor = consola.nextLine();
+       String autor = consola.nextLine();
        System.out.println(tituloLibro + " " + "Fue escrito por: "+ autor);
         
     }

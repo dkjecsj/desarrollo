@@ -16,8 +16,8 @@ public class SentenciaSwitch {
     public static void main(String[] args) {
 
         //SETENCIA SWITCH    
-        var numero = 1;
-        var numeroTexto = "Valor desconocido";
+        int numero = 1;
+        String numeroTexto = "Valor desconocido";
 
         switch (numero) {
             case 1:
@@ -44,7 +44,7 @@ public class SentenciaSwitch {
         Scanner consola = new Scanner(System.in);
         System.out.println("Proporcione el numero del mes:");
         int mes = Integer.parseInt(consola.nextLine());
-        var estacion = "Estacion desconocida";
+        String estacion = "Estacion desconocida";
 
         switch (mes) {
             case 1:

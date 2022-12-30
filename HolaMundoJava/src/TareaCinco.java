@@ -17,7 +17,7 @@ public class TareaCinco {
         Scanner consola = new Scanner(System.in);
         System.out.println("Porporcione un valor entre 0 y 10");
         int numero = Integer.parseInt(consola.nextLine());
-        var nota = "Valor desconocido";
+        String nota = "Valor desconocido";
 
         /* switch (numero) {
 

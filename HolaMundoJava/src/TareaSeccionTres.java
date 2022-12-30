@@ -14,15 +14,15 @@ import java.util.Scanner;
 public class TareaSeccionTres {
     
     public static void main(String[] args) {
-        var consola = new Scanner(System.in);
+        Scanner consola = new Scanner(System.in);
         System.out.println("Ingrese nombre del libro: ");
-        var nombre = consola.nextLine();
+        String nombre = consola.nextLine();
         System.out.println("Ingresa el ID: ");
-        var id = Integer.parseInt(consola.nextLine());
+        int id = Integer.parseInt(consola.nextLine());
         System.out.println("Ingresa el precio ");
-        var precio = Double.parseDouble(consola.nextLine());
+        double precio = Double.parseDouble(consola.nextLine());
         System.out.println("Ingrese TRUE para envio gratuito ");
-        var envioGratuito = Boolean.parseBoolean(consola.nextLine());
+        boolean envioGratuito = Boolean.parseBoolean(consola.nextLine());
         System.out.println(nombre + "  " + "#" + id + "\nPrecio: $" + precio + "\nEnvio Gratuito:" +envioGratuito);
         
         //Para comparar booleanos, el espera a que sea verdadero para entrar.

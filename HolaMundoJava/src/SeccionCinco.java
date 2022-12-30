@@ -16,7 +16,7 @@ public class SeccionCinco {
     public static void main(String[] args) {
 
         //ESCTRUCUTURA IF/ELSE
-        var condicion = true;
+        boolean condicion = true;
 
         if (condicion) //Si la condicio es verdadera
         {
@@ -27,8 +27,8 @@ public class SeccionCinco {
 
         //EJEMPLOS
         //1. CONVERTIR DE NUMERO A LETRA.
-        var numero = 2;
-        var numeroTexto = "Numero desconocido";
+        int numero = 2;
+        String numeroTexto = "Numero desconocido";
 
         if (numero == 1) {
             numeroTexto = "Numero Uno";
@@ -53,7 +53,7 @@ public class SeccionCinco {
     
     System.out.println("Proporcione numero del mes:");
     int mes = Integer.parseInt(consola.nextLine());
-    var estacion = "Estacion desconocida";
+    String estacion = "Estacion desconocida";
     
     if(mes == 1 || mes == 2 || mes == 12){
         estacion = "Invierno";

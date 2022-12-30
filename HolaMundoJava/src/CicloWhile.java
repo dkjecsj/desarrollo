@@ -21,7 +21,7 @@ public class CicloWhile {
            
       //CICLO DO WHILE En caso de que necesitemos que se ejecute una vez
       
-      var contador = 0;
+      int contador = 0;
       
       do{
           System.out.println("contador = " + contador);
