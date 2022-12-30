@@ -743,11 +743,11 @@ Unas de las características de Spring Boot son :
 
 ---
 
-2.MVC modelo vista controlador :
+2. MVC modelo vista controlador :
 
-M : Se usa para desarrollar aplicaciones web y Apirest
-C : Maneja todas las peticiones del usuario
-v : Mostrar los datos (html, pdf, son, etc)
+- M : Se usa para desarrollar aplicaciones web y Apirest
+- C : Maneja todas las peticiones del usuario
+- V : Mostrar los datos (html, pdf, son, etc)
 
 ---
 
@@ -761,7 +761,7 @@ v : Mostrar los datos (html, pdf, son, etc)
 
 ---
 
-5.Administrador de dependencias nos permite crear un Jar o War  y  manejo de librerías.
+5. Administrador de dependencias nos permite crear un Jar o War  y  manejo de librerías.
 
 ---
 
