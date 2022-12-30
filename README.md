@@ -6,6 +6,9 @@
 2. Descripción del proyecto
 3. Guia de inicio
     - Requisitos de instalación
+    1. Contar con IDE de preferencia en este caso NetbBeans.
+    2. Hacer uso del sistema de control GitHub
+    3. Descargar Framework Spring Boot 
 4. Contenido del curso
    - Universidad Java De Cero A Experto.
    - SpringBoot
@@ -761,7 +764,7 @@ Unas de las características de Spring Boot son :
 
 ---
 
-5. Administrador de dependencias nos permite crear un Jar o War  y  manejo de librerías.
+5.Administrador de dependencias nos permite crear un Jar o War  y  manejo de librerías.
 
 ---
 
