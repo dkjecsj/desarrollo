@@ -23,7 +23,7 @@ public class Recuento {
 
                 //System.out.println("Contador 1 : " + cont + "Contador 2 :" + cont2);
 
-                if (cont2 < cont) {
+                if (cont2 <  cont) {
 
                     cont2 = cont; // Muestra el valor que mas se repitio.
                     numeroMayor = miArray[i-1];
