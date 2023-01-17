@@ -1,0 +1,72 @@
+//Setencia IF/ELSE
+
+let mes = 1;
+let estacion;
+
+
+if (mes == 1 || mes == 2 || mes == 12) {
+    estacion = "Invierno";
+    console.log(estacion);
+
+} else if (mes == 3 || mes == 4 || mes == 5) {
+    console.log("Primavera");
+
+
+} else if (mes == 6 || mes == 7 || mes == 8) {
+    console.log("Verano");
+
+} else if (mes == 9 || mes == 10 || mes == 11) {
+    console.log("Otono");
+
+} else {
+    console.log("Valor Desconocido");
+}
+
+//EJERCICIOS
+
+let horaDia = 8;
+let mensaje;
+
+if (horaDia >= 6 && horaDia <= 11) {
+    mensaje = "Buenos dias";
+
+
+} else if (horaDia >= 12 && horaDia <= 18) {
+    mensaje = "Buenas tardes";
+
+} else if (horaDia >= 19 && horaDia <= 24) {
+    mensaje = "Buenas noches";
+
+} else if (horaDia >= 0 && horaDia <= 6) {
+    mensaje = "Duermiendo";
+
+}
+
+console.log(mensaje);
+
+//Setencia de control Switch 
+
+let numero = 2;
+let numeroTexto = "Valor Desconocido";
+
+switch (numero) {
+    case 1:
+        numeroTexto = "numero uno";
+        break;
+    case 2:
+        numeroTexto = "numero dos";
+        break;
+
+    case 3:
+        numeroTexto = "numero tres";
+        break;
+
+    case 4:
+        numeroTexto = "numero cuatro";
+        break;
+
+    default:
+        numeroTexto = "caso no encontrado"
+}
+
+console.log(numeroTexto);
