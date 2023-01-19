@@ -34,7 +34,6 @@ catch(error){
     console.log(error.name);
     console.log(error.menssage);
 }
-
 finally{
     console.log('Termina revision de errores');
 }

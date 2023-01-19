@@ -33,7 +33,7 @@ public class ServiceDAO {
     /*Metodo apagar*/
     public void ApagarOLT(ArrayList<ObjectVO> lists, String contras, String usuario, String ip, String port) {
         try {
-            //  long totalSum = 0;
+            
             //leer excel java
             //    long startTime = System.currentTimeMillis();
             //Abro la conexión al telnet por el puerto 23
