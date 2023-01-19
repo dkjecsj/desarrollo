@@ -8,14 +8,11 @@ import com.mycompany.paipajava.dao.ServiceDAO;
 import com.mycompany.paipajava.tabla.Tabla_PdfVO;
 import com.mycompany.paipajava.vo.ObjectVO;
 import java.awt.Desktop;
-import java.awt.Image;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.net.URL;
 import java.util.ArrayList;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
+import java.util.List;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
@@ -41,7 +38,7 @@ public class Paipa extends javax.swing.JFrame {
         initComponents();
         setTitle("Apagado y Encendido de Television en ONT");
         // jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/paipajava/imagen/b.png")));
-     //   jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/paipajava/imagen/b.png")));
+        //   jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/paipajava/imagen/b.png")));
         activa_boton(true, true, true);
     }
 
@@ -170,13 +167,13 @@ public class Paipa extends javax.swing.JFrame {
 
         tabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "NOMBRE", "FRAME/TARJETA", "PUERTO/ID"
+                "NOMBRE", "FRAME/TARJETA", "PUERTO/ID", "ESTADO"
             }
         ));
         tabla.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -341,8 +338,11 @@ public class Paipa extends javax.swing.JFrame {
             String ip = jTextField8.getText();
             //ip
             String port = jTextField6.getText();
-            apagar_olt(list, contras, usuario, ip, port);
-            tpdf.visualizar_OLTVO(tabla, list);
+            List<String> listaResultado = new ArrayList<>();
+            listaResultado = apagar_olt(list, contras, usuario, ip, port);
+            // tpdf.visualizar_OLTVO(tabla, list);
+
+            tpdf.visualizar_OLTVRESULTADO(tabla, list, listaResultado);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(new JFrame(), e.getMessage(), "Dialog",
                     JOptionPane.ERROR_MESSAGE);
@@ -382,7 +382,13 @@ public class Paipa extends javax.swing.JFrame {
             //ip
             String port = jTextField6.getText();
             encender_olt(list, contras, usuario, ip, port);
-            tpdf.visualizar_OLTVO(tabla, list);
+            //    tpdf.visualizar_OLTVO(tabla, list);
+            List<String> listaResultado = new ArrayList<>();
+
+            listaResultado = encender_olt(list, contras, usuario, ip, port);
+            // tpdf.visualizar_OLTVO(tabla, list);
+
+            tpdf.visualizar_OLTVRESULTADO(tabla, list, listaResultado);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(new JFrame(), e.getMessage(), "Dialog",
                     JOptionPane.ERROR_MESSAGE);
@@ -436,12 +442,22 @@ public class Paipa extends javax.swing.JFrame {
         btnseleccionar.setText("Seleccionar...");
     }
 
-    public void apagar_olt(ArrayList<ObjectVO> lists, String contras, String usuario, String ip, String port) {
-        serviceDAO.ApagarOLT(lists, contras, usuario, ip, port);
+    public List<String> apagar_olt(ArrayList<ObjectVO> lists, String contras, String usuario, String ip, String port) {
+        List<String> apagar = new ArrayList<>();
+        apagar = serviceDAO.ApagarOLT(lists, contras, usuario, ip, port);
+        /*  for (int i = 0; i < apagar.size(); i++) {
+            System.out.println("ACA ME LLEGA OFF "+apagar.get(i));
+        }*/
+        return apagar;
     }
 
-    public void encender_olt(ArrayList<ObjectVO> lists, String contras, String usuario, String ip, String port) {
-        serviceDAO.EncenderOLT(lists, contras, usuario, ip, port);
+    public List<String> encender_olt(ArrayList<ObjectVO> lists, String contras, String usuario, String ip, String port) {
+        List<String> encender = new ArrayList<>();
+        encender = serviceDAO.EncenderOLT(lists, contras, usuario, ip, port);
+        /*for (int i = 0; i < encender.size(); i++) {
+            System.out.println("ACA ME LLEGA ON "+encender.get(i));
+        }*/
+        return encender;
     }
 
     /**

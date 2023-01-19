@@ -11,6 +11,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.apache.commons.net.telnet.TelnetClient;
@@ -30,14 +31,19 @@ public class ServiceDAO {
     private String password;
     private String promptComplete;
 
+    private String estadoa;
+
     /*Metodo apagar*/
-    public void ApagarOLT(ArrayList<ObjectVO> lists, String contras, String usuario, String ip, String port) {
+    public List<String> ApagarOLT(ArrayList<ObjectVO> lists, String contras, String usuario, String ip, String port) {
+        List<String> estado = new ArrayList<>();
         try {
+<<<<<<< HEAD
             
+=======
+>>>>>>> 081a8eb38d6e7bba35f3b8ed39aefae1597600c9
             //leer excel java
             //    long startTime = System.currentTimeMillis();
             //Abro la conexión al telnet por el puerto 23
-            // telnet.connect("190.90.132.129", 10038);
             telnet.connect(ip, Integer.parseInt(port));
             //Ahora necesito una forma de leer las respuestas que
             //me envía el telnet, para esto obtenemos un InputStream
@@ -56,60 +62,53 @@ public class ServiceDAO {
             //caracter (un char) sea -1 y que el prompt sea igual
             //al patron que le enviamos como argumento, en este caso
             //es hasta que el prompt despliegue el patron login:
-            System.out.print("entre");
-            readUntil(">>User name:");
+           // System.out.print("entre");
+            readUntil(">>User name:", "", "");
             //cuando el readUntil de login finaliza, procedemos a ingresar el user
             //a través del método write, el cual escribe en la consola
-            //  write("pruebaapp");
             write(usuario);
 
             //esperamos hasta que el prompt muestre la palabra password:
             //La palabra tiene que ser exacta a la que sale en el prompt
-            readUntil(">>User password:");
+            readUntil(">>User password:", "", "");
 
             //Ahora ingresamos el password
-            // write("prueba123");
             write(contras);
 
             //Esperamos hasta que salga el prompt de nuestro servidor
-            readUntil("OLT5PAIPA>");
+            readUntil("OLT5PAIPA>", "", "");
 
             //Para ver el directorio donde estamos
             write("enable");
-            readUntil("OLT5PAIPA#");
+            readUntil("OLT5PAIPA#", "", "");
 
             write("config");
 
             //Esperamos a que salga el prompt
-            readUntil("OLT5PAIPA(config)#");
+            readUntil("OLT5PAIPA(config)#", "", "");
 
             for (int i = 0; i < lists.size(); i++) {
-
                 write("interface gpon " + lists.get(i).getFrame());
 
-                readUntil("OLT5PAIPA(config-if-gpon-" + lists.get(i).getFrame() + ")#");
                 String a[] = lists.get(i).getPuerto().split("/");
-                write("ont port attribute " + a[0] + " " + a[1] + " catv 1 operational-state off");
-              //  readUntil("ont port attribute " + a[0] + " " + a[1] + " catv 1 operational-state o ff");
-                readUntil("OLT5PAIPA(config-if-gpon-" + lists.get(i).getFrame() + ")#");  
-              System.out.println("ERROR");
-               // if (readUntil("ont port attribute " + a[0] + " " + a[1] + " catv 1 operational-state o ff" + "\n" + "  Failure: The ONT does not exist").equals("ont port attribute " + a[0] + " " + a[1] + " catv 1 operational-state o ff" + "\n" + "  Failure: The ONT does not exist")) {
-                 //   System.out.println("Apagado Fallido");
-               // }
-                //   readUntil("OLT5PAIPA(config-if-gpon-" + lists.get(i).getFrame() + ")#");
-                //if (readUntil("OLT5PAIPA(config-if-gpon-" + lists.get(i).getFrame() + ")#").equals("OLT5PAIPA(config-if-gpon-" + lists.get(i).getFrame() + ")#")) {
-                 //   System.out.println("Apagado");
-                //}
+
+                String patronBusqueda = a[0] + "" + a[1];
+                for (int j = 0; j < 2; j++) {
+                    readUntil("OLT5PAIPA(config-if-gpon-" + lists.get(i).getFrame() + ")#", patronBusqueda, "apagado");
+                    write("ont port attribute " + a[0] + " " + a[1] + " catv 1 operational-state off");
+                }
+
+                readUntil("OLT5PAIPA(config-if-gpon-" + lists.get(i).getFrame() + ")#", patronBusqueda, "apagado");
+                estado.add(this.estadoa);
 
             }
+            return estado;
 
         } catch (Exception e) {
             e.printStackTrace();
 
-            System.out.println("ENTRE aca3");
         } finally {
             try {
-                System.out.println("ENTRE aca");
                 //Liberamos recursos
                 out.close();
                 reader.close();
@@ -118,14 +117,14 @@ public class ServiceDAO {
 
             } catch (IOException ex) {
 
-                System.out.println("ENTRE aca2");
                 Logger.getLogger(ServiceDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
 
         }
+        return estado;
     }
 
-    public String readUntil(String pattern) {
+    public String readUntil(String pattern, String patronBusqueda, String funcion) {
         StringBuffer sb = new StringBuffer();
 
         try {
@@ -135,10 +134,44 @@ public class ServiceDAO {
 
             int check = in.read();
             char ch = (char) check;
+            String resultado = "";
             while (check != -1) {
-                System.out.print(ch);
+           //     System.out.print(ch);
                 sb.append(ch);
+
                 if (ch == lastChar) {
+                    resultado = sb.toString();
+                    resultado = resultado.replaceAll(" ", "");
+                    //  System.out.println("RESULTADO ES: " + resultado);
+                    if (resultado.contains("attribute" + patronBusqueda + "catv1operational-state") && funcion.equals("apagado")) {
+                        //     System.out.println("ENTRE APAGADOO");
+                        if (resultado.contains("Failure:Makeconfigurationrepeatedly")) {
+                            this.estadoa = "Apagado";
+                            //      System.out.println(estadoa + " ACA ESTA EL READ COMPLETO  OFF " + resultado);
+                        } else {
+                            //        System.out.println("ENTRE ERRORRR ONT");
+                            if (resultado.contains("doesnotexist")) {
+                                this.estadoa = "ONT no Existe";
+                                //        System.out.println(estadoa + " ACA ESTA EL READ COMPLETO  ONT no Existe " + resultado);
+                            }
+                        }
+                    } else {
+                        if (resultado.contains("attribute" + patronBusqueda + "catv1operational-state") && funcion.equals("encendido")) {
+                            //        System.out.println("ENTRE ENCENDIDO");
+                            if (resultado.contains("Failure:Makeconfigurationrepeatedly")) {
+                                this.estadoa = "Encendido";
+                                //           System.out.println(estadoa + " ACA ESTA EL READ COMPLETO  ON " + resultado);
+
+                            } else {
+                                //             System.out.println("ENTRE ERRORRR ONT");
+                                if (resultado.contains("doesnotexist")) {
+                                    this.estadoa = "ONT no Existe";
+                                    //                      System.out.println(estadoa + " ACA ESTA EL READ COMPLETO  ONT no Existe " + resultado);
+                                }
+                            }
+                        }
+                    }
+
                     if (sb.toString().endsWith(pattern)) {
 
                         return sb.toString();
@@ -158,14 +191,15 @@ public class ServiceDAO {
         try {
             out.println(value);
             out.flush();
-            System.out.println(value);
+          //  System.out.println(value);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     /*Metodo encender*/
-    public void EncenderOLT(ArrayList<ObjectVO> lists, String contras, String usuario, String ip, String port) {
+    public List<String> EncenderOLT(ArrayList<ObjectVO> lists, String contras, String usuario, String ip, String port) {
+        List<String> estado = new ArrayList<>();
         try {
             //leer excel java
             //Abro la conexión al telnet por el puerto 23
@@ -188,8 +222,8 @@ public class ServiceDAO {
             //caracter (un char) sea -1 y que el prompt sea igual
             //al patron que le enviamos como argumento, en este caso
             //es hasta que el prompt despliegue el patron login:
-            System.out.print("entre");
-            readUntil(">>User name:");
+            //    System.out.print("entre");
+            readUntil(">>User name:", "", "");
             //cuando el readUntil de login finaliza, procedemos a ingresar el user
             //a través del método write, el cual escribe en la consola
             //  write("pruebaapp");
@@ -197,35 +231,42 @@ public class ServiceDAO {
 
             //esperamos hasta que el prompt muestre la palabra password:
             //La palabra tiene que ser exacta a la que sale en el prompt
-            readUntil(">>User password:");
+            readUntil(">>User password:", "", "");
 
             //Ahora ingresamos el password
             // write("prueba123");
             write(contras);
 
             //Esperamos hasta que salga el prompt de nuestro servidor
-            readUntil("OLT5PAIPA>");
+            readUntil("OLT5PAIPA>", "", "");
 
             //Para ver el directorio donde estamos
             write("enable");
-            readUntil("OLT5PAIPA#");
+            readUntil("OLT5PAIPA#", "", "");
 
             write("config");
 
             //Esperamos a que salga el prompt
-            readUntil("OLT5PAIPA(config)#");
+            readUntil("OLT5PAIPA(config)#", "", "");
             for (int i = 0; i < lists.size(); i++) {
-
+                //      System.out.println("ENTRE A WHILE");
                 write("interface gpon " + lists.get(i).getFrame());
 
-                readUntil("OLT5PAIPA(config-if-gpon-" + lists.get(i).getFrame() + ")#");
                 String a[] = lists.get(i).getPuerto().split("/");
-                write("ont port attribute " + a[0] + " " + a[1] + " catv 1 operational-state on");
 
-                readUntil("OLT5PAIPA(config-if-gpon-" + lists.get(i).getFrame() + ")#");
+                String patronBusqueda = a[0] + "" + a[1];
+                for (int j = 0; j < 2; j++) {
+                    //      System.out.println("ENTRE A FOR");
+                    readUntil("OLT5PAIPA(config-if-gpon-" + lists.get(i).getFrame() + ")#", patronBusqueda, "encendido");
+                    write("ont port attribute " + a[0] + " " + a[1] + " catv 1 operational-state on");
+                }
+
+                //  System.out.println("SALI A WHILE");
+                readUntil("OLT5PAIPA(config-if-gpon-" + lists.get(i).getFrame() + ")#", patronBusqueda, "encendido");
+                estado.add(this.estadoa);
             }
 
-            System.out.print("sali");
+            return estado;
         } catch (Exception e) {
             e.printStackTrace();
 
@@ -242,5 +283,6 @@ public class ServiceDAO {
             }
 
         }
+        return estado;
     }
 }
