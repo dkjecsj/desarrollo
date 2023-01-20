@@ -2,6 +2,8 @@ package com.mycompany.ejercicioexcel;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
@@ -20,14 +22,32 @@ public class EjercicioExcel {
 
         //Crear Hoja Nueva"
         Sheet sheet = workbook.createSheet("Hoja de datos");
+        ObjectVO objectVO = new ObjectVO();
+
+        ArrayList<String> string = new ArrayList();
+        string.add("prueba2");
+
+        ArrayList<ObjectVO> list = new ArrayList();
+        objectVO.setFrame("prueba");
+        objectVO.setPuerto("8080");
+        objectVO.setSn("444633386A400E1F");
+        list.add(objectVO);
 
         //Por cada linea se crea un arreglo de objetos (Object[])
         Map<String, Object[]> datos = new TreeMap<String, Object[]>();
-        datos.put("1", new Object[]{"Identificar", "Nombre", "Apellidos"});
-        datos.put("2", new Object[]{1, "Maria", "Remen"});
-        datos.put("3", new Object[]{2, "David", "Allos"});
-        datos.put("4", new Object[]{3, "Carlos", "Caritas"});
-        datos.put("5", new Object[]{4, "Luisa", "Vitz"});
+
+        for (int i = 0; i < list.size(); i++) {
+          
+
+            String iCadena = Integer.toString(i);
+            list.get(i).getFrame();
+            list.get(i).getPuerto();
+            list.get(i).getSn();
+            datos.put(iCadena, new Object[]{list.get(i).getFrame(), list.get(i).getPuerto(), list.get(i).getSn(), string.get(i)});
+            //datos.put("1", new Object[]{"Cedula", "Nombre", "Celular"});
+            //datos.put("2", new Object[]{"1018498409", "Paola", "3244824164"});
+
+        }
 
         //Iterar sobre datos para escribir en la hoja.
         Set<String> keyset = datos.keySet();
