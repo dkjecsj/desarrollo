@@ -37,10 +37,7 @@ public class ServiceDAO {
     public List<String> ApagarOLT(ArrayList<ObjectVO> lists, String contras, String usuario, String ip, String port) {
         List<String> estado = new ArrayList<>();
         try {
-<<<<<<< HEAD
-            
-=======
->>>>>>> 081a8eb38d6e7bba35f3b8ed39aefae1597600c9
+
             //leer excel java
             //    long startTime = System.currentTimeMillis();
             //Abro la conexión al telnet por el puerto 23

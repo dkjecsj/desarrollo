@@ -3,13 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Ejemplo DOM con JavaScript</title>
+    <style>
+        .azul{
+            color:blue;
+        }
+        
+    </style>
 </head>
 <body>
-    <h1>Ejemplo DOM con JavaScript</h1>
-    <p>Saludos!</p>
+    <h1 class = 'azul'>Ejemplo DOM con JavaScript</h1>
+    <p class = 'azul'>Saludos!</p>
+    <p class = 'azul'>otro parrafo</p>
 
     <script>
-    console.log('saludos desde JavaScript');
+    let cabecero = document.getElementById('cabecero');
+    console.log(`valor cabecero: ${cabecero.innerHTML}`);
+    let parrafo = document.getElementById('parrafo');
+    console.log(`valor parrafo: ${parrafo.innerHTML}`);
+    parrafo.innerHTML = 'Nuevo valor del parrafo';
+    cabecero.innerHTML = 'Nuevo valor del cabecero';
+
+    //Metodo getElementByTagName()
+    let elementos = document.getElementsByTagName('p');
+    console.log(`No. Parrafos: $ elementos}`);
+    /*for(let i=0; i <elementos.length;i++);
+    console.log(`${i}-` ${elementos[i].innerHTML});*/
+
+    //Metodo getElementsByClassName()
+
+    for(let elemento of elementos){
+        console.log(`${elemento.innerHTML}`);
+
+    }
+
+    //Metodo querySelectorAll
+    let elementos2 = document.querySelectorAll('p.azul');
+
+
+
+
+
     </script>
     
 </body>
