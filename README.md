@@ -786,6 +786,9 @@ mantener y optimizar el redimiento de la base de datos.
 
 1. Select : Se utiliza para seleccionar datos de una base de datos. Tambien lo podemos usar para cambiar los nombres las las columnas.
 git
+
+![This is an image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tutorialesprogramacionya.com%2Fmysqlya%2Ftemarios%2Fdescripcion.php%3Fcod%3D6%26punto%3D7%26inicio%3D&psig=AOvVaw1rQiVxqHOZEfzv0yU7U3r5&ust=1674591602960000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCIiph__B3vwCFQAAAAAdAAAAABAE)
+
 ---
 2. Distic : Se utiliza en conjunto de la opcion SELECT y nos ayuda a traer valores diferente.
 ---
