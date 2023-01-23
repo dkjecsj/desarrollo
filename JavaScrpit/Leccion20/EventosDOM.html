@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Manejo DOM con JavaScript</title>
+</head>
+<body onload="entrar()" >
+    <!--Cambia el titulo al darle click, colocar el codigo JS directamente en el evento no es comun
+ y no es una bueba practica, para esto debemos crear metodos.-->
+    <!--<h1 onclick="this.innerHTML = 'Nuevo Titulo'">Manejo DOM con JavaScript</h1>-->
+    <h1 id ='titulo' onclick="cambiarTexto(this)" onmouseover="rojo(this)" onmouseout="azul(this)" onmousedown="rojo(this)" onmouseup="azul(this)" onclick ="verde(this)">
+        Manejo DOM con JavaScript</h1>
+    <br/>
+    Nombre : <input type = "text"  onchange="convertir(this)"/>
+    <div id ='mostrar'></div>
+
+    <script>
+       /* function cambiarTexto (titulo){
+            console.log(titulo);
+            console.log(titulo.innerHTML);
+            titulo.innerHTML = 'Cambiamos el titulo';
+        }*/
+
+    //Asociar eventos a elementos html
+   
+   /* function entrar(){
+        alert('Entrando a la pagina web');
+        let texto = '';
+        if(navigator.cookieEnabled){
+            texto = 'cookies estan habilitadas';
+        }
+        else{
+            texto  = 'cookies estan inhabilitadas';
+        }
+
+        document.getElementById('mostrar').innerHTML = texto;
+    } */
+
+    //Manejo del evento onchange con javascrip
+
+  /*  function convertir(nombreInput){
+    nombreInput.value = nombreInput.value.toUpperCase();
+     
+
+    }*/
+
+    //Eventos onmouseout y onmouseover : Manejo del raton posicionandonos o quitando.
+
+    function rojo(titulo){
+        titulo.style.color = 'red';
+
+
+    }
+
+    function azul(titulo){
+        titulo.style.color = 'blue';
+
+    }
+
+//Eventos onmousedown y omouseup : Manejo del rato cuando damos y soltamos el click
+  function verde(titulo){
+    titulo.style.color = 'green';
+  }
+
+
+
+
+
+
+    </script>    
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Manejo DOM con JavaScript</title>
+</head>
+<body>
+    <h1 id = 'titulo'>Manejo DOM JavaScript</h1>
+    <br/>
+    <form id="forma">
+        
+        Nombre: <input type:"text" id = 'nombre'/>
+        <br/><br/>
+        Apellido: <input type:"text" id = 'apellido'/>
+
+    </form>
+
+
+    <script>
+
+//Se realiza el ejemplo con formularios 
+      const forma = document.getElementById('forma'); // de esta manera de aplican para los los valores como nombre y apellido
+      forma.addEventListener('focus', (evento) =>{
+        evento.target.style.background  = 'blue'; //Este codigo no se puede reutilizat
+    }, true);
+
+   forma.addEventListener('blur', (evento)=>{
+        evento.target.style.background = 'white';
+    }, true);
+
+    //Se realizarel ejemplo con funciones por separado
+
+    document.getElementById('nombre').addEventListener('focus', (evento) =>{
+        evento.target.style.background  = 'pink'; //Este codigo no se puede reutilizat
+    });
+    document.getElementById('nombre').addEventListener('blur', (evento)=>{
+        evento.target.style.background = 'white';
+    });
+    
+    document.getElementById('apellido').addEventListener('focus', cambiar);
+    document.getElementById('apellido').addEventListener('blur', regresar);
+
+    function cambiar (evento){
+        let componente = evento.target;
+        componente.style.background = 'yellow';
+
+    }
+
+    function regresar (evento){
+        evento.target.style.background = 'white';
+    }
+
+    </script>
+    
+</body>
+</html>
