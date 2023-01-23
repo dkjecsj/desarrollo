@@ -771,6 +771,47 @@ Unas de las características de Spring Boot son :
 6. Los paquetes Jar se usan como plantillas Timeline y Api rest.  Los  War cuando queremos publicar en un  servidor externo y vista JC.
 
 
+### **My SQL.**
+
+El lenguaje de consulta estructurada (SQL) es un lenguaje de consulta de programacion para almacenar y procesar informacion en una base de datos
+relacional. Un base de datos relacional almacena informacion en forma de tabla, con filas y columnas que 
+representan almacena informacion en forma de tabla, con filas y columnas que representan diferentes atributos
+de datos y las diversas relaciones entre los valores de datos.
+
+Puede usar las instrucciones SQL para almacenar , actualizar, eliminar, buscar y recuperar informacion de la base de datos. Tambien puede usar SQL para
+mantener y optimizar el redimiento de la base de datos.
+
+
+### Instrucciones:
+
+1. Select : Se utiliza para seleccionar datos de una base de datos. Tambien lo podemos usar para cambiar los nombres las las columnas.
+
+2. Distic : Se utiliza en conjunto de la opcion SELECT y nos ayuda a traer valores diferente.
+
+3. ORDER BY : Se utiliza para ordenar la informacion de nuestras tablas, ya sea de manera ascedente o descendente.
+
+4. WHERE : Se utiliza para extraer aquellos registros que cumplen una condicion especifica.
+
+5. AND : Lo usamos cuando queremos que dos condiciones sean verdaderas.
+
+6. OR : Realiza la consulta de la primera condicion y luego de la segunda. Muestra los resultados que cumplas
+ambas condiciones.
+
+7. NOT : Lo utilizamos cuando no queremos consultar una condicion en especifico.
+
+8. IN : Es una abreviatura de multiples condiciones or.
+
+9. BETWEEN : Lo utilizamos para seleccionar valores dentro de un rango dado.
+
+10. LIKE : Se utiliza para buscar un patron especifico de una columna.
+
+11. IlNNER JOIN : Si se quiere unir dos o mas tablas ,estas deben tener una llaven en comun entre ellas.
+
+12. LEFT JOIN : Si quiero mantener los datos de la izquiera y quiero unirlos con los datos de las derecha.
+
+13. RIGHT JOIN : Si quiero mantener los datos de la derecha y quiero unirlos con los daros de la izquierda.
+
+
 
 
 
